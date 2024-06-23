@@ -19,13 +19,13 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_red[]         = "#cf0300";
-static const char col_cyan[]        = "#94041c"; // "#005577";
+static const char col_red2[]        = "#94041c"; // "#005577";
 static const unsigned int baralpha  = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_red },
+	[SchemeSel]  = { col_gray4, col_red2,  col_red },
 };
 
 static const unsigned int alphas[][3]	= {
@@ -74,8 +74,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *dmenuqalccmd[] = { "dmenu_run", "-c", "-l", "2", "-C", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_red2, "-sf", col_gray4, NULL };
+static const char *dqalccmd[] = { "dmenu_run", "-c", "-l", "2", "-C", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_red2, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 /* custom commands */
 //static const char *rofi[] = {"rofi", "-show", "drun", "-show-emojis", NULL};
@@ -95,7 +95,7 @@ static const Key keys[] = {
 	{ MODKEY,		        XK_f,      spawn,          {.v = firefox } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = code    } },
 	{ Mod1Mask,                     XK_space,  spawn,          {.v = dmenucmd} },
-	{ Mod1Mask|ShiftMask,           XK_space,  spawn,          {.v = dmenuqalccmd} },
+	{ Mod1Mask|ShiftMask,           XK_space,  spawn,          {.v = dqalccmd} },
 	{ MODKEY,                       XK_t,      spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_j,      pushdown,       {0} },
 	{ MODKEY|ShiftMask,             XK_k,      pushup,         {0} },
