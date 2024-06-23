@@ -6,6 +6,7 @@
 ### Dependencies
 - Xorg (for dwm)
 - pipewire (if you are using pulseaudio, you can edit the configuration related to it)
+- amixer (for managing audio)
 - slock (for lock screen)
 - xss-lock (for detecting lock screen if the screen goes off)
 - clipmenu (clipboard used in dmenu)
