@@ -11,4 +11,5 @@
 - xss-lock (for detecting lock screen if the screen goes off)
 - clipmenu (clipboard used in dmenu)
 - scrot (simple screenshot tool)
+- picom (for transparency)
 - Fonts Like: (Fira Code Nerd, Noto Kufi Arabic Font, Noto Color Emoji) you can download from [google fonts](https://fonts.google.com)
