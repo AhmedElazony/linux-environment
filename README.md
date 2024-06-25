@@ -24,3 +24,9 @@
 .(/your/path/to)/dwm/scripts/dwm-status.sh &
 ```
 put this line <strong>before</strong> the ```exec dwm``` line
+
+The Status bar from the manual Script:
+<img src="/screenshots/Jun26_0055.png" />
+
+The Status bar from slstatus:
+<img src="/screenshots/Jun26_0059.png" />
