@@ -29,4 +29,4 @@ The Status bar from the manual Script:
 <img src="/screenshots/Jun26_0055.png" />
 
 The Status bar from slstatus:
-<img src="/screenshots/Jun26_0059.png" />
+<img src="/screenshots/Jun26_0102.png" />
