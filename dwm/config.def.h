@@ -9,9 +9,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int splitstatus        = 1;	/* 1 for split status items */
 static const char *splitdelim	    = ";";	/* Character used for separating status */
-static const char *fonts[]          = { "FiraCodeNerdFontMono-Medium:size=11", 
-					"NotoKufiArabic-Medium:size=10",
-					"monospace:size=11", 
+static const char *fonts[]          = { "FiraCodeNerdFont-Medium:size=12", 
+					"NotoKufiArabic-Medium:size=12",
+					"monospace:size=14",
+					"Nerd Font:size=16",
+					"Font Awesome 6 Free:size=14"
 };
 static const char dmenufont[]       = "FiraCodeNerdFontMono-Medium:size=13";
 static const char col_gray1[]       = "#222222";
