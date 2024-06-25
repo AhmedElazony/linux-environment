@@ -16,8 +16,8 @@
 
 ### NOTES
 - You can use <strong>one</strong> of these to configure the status bar NOT The Together:
-    - [Manual Status bar Scrip](https://github.com/AhmedElazony/blob/main/dwm/scripts/dwm-status.sh)
-    - [slstatus](https://github.com/AhmedElazony/blob/main/slstatus)
+    - [Manual Status bar Scrip](https://github.com/AhmedElazony/linux-environment/blob/master/dwm/scripts/dwm-status.sh)
+    - [slstatus](https://github.com/AhmedElazony/linux-environment/blob/master/slstatus)
 
 > To Enable the status bar using the manual script, But this line in the .xinitrc:
 '''bash
