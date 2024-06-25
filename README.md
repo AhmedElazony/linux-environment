@@ -20,7 +20,7 @@
     - [slstatus](https://github.com/AhmedElazony/linux-environment/blob/master/slstatus)
 
 > To Enable the status bar using the manual script, But this line in the .xinitrc:
-'''bash
+```bash
 .(/your/path/to)/dwm/scripts/dwm-status.sh &
-'''
-put this line <strong>before</strong> the '''bash exec dwm ''' line
+```
+put this line <strong>before</strong> the ```bash exec dwm ``` line
