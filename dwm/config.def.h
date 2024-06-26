@@ -16,7 +16,7 @@ static const char *fonts[]          = { "FiraCodeNerdFont-Medium:size=12",
 					"Font Awesome 6 Free:size=14"
 };
 static const char dmenufont[]       = "FiraCodeNerdFontMono-Medium:size=13";
-static const char col_gray1[]       = "#222222";
+static const char col_gray1[]       = "#222222"; //"#282a36"
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
@@ -76,29 +76,14 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_red2, "-sf", col_gray4, NULL };
-static const char *dqalccmd[] = { "dmenu_run", "-c", "-l", "2", "-C", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_red2, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-fn", dmenufont, "-nb", "#282a36", "-nf", col_gray3, "-sb", col_red2, "-sf", col_gray4, NULL };
+static const char *dqalccmd[] = { "dmenu_run", "-c", "-l", "2", "-C", "-fn", dmenufont, "-nb", "#282a36", "-nf", col_gray3, "-sb", col_red2, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
-/* custom commands */
-//static const char *rofi[] = {"rofi", "-show", "drun", "-show-emojis", NULL};
-static const char *code[] = {"code", NULL};
-static const char *firefox[] = {"firefox", NULL};
-static const char *clipcmd[] = {"clipmenu", "-c", "-fn", dmenufont, NULL};
-static const char *prtscrncmd[] = {"scrot", "-s", "/home/ahmedelazony/Pictures/Screenshots/%b%d_%H%M.png", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ 0,                            XK_Print,  spawn,          {.v = prtscrncmd } },
-	{ MODKEY,                       XK_F10,    spawn,          SHCMD("amixer -D pipewire sset Master 5%-") },
-	{ MODKEY,                       XK_F11,    spawn,          SHCMD("amixer -D pipewire sset Master 5%+") },
-	{ MODKEY,                       XK_F9,     spawn,          SHCMD("amixer -D pipewire sset Master toggle") },
-	{ MODKEY,                       XK_v,      spawn,          {.v = clipcmd } },
-	{ MODKEY,                       XK_b,      spawn,          SHCMD("$BROWSER") },
-	{ MODKEY,		        XK_f,      spawn,          {.v = firefox } },
-	{ MODKEY,                       XK_c,      spawn,          {.v = code    } },
 	{ Mod1Mask,                     XK_space,  spawn,          {.v = dmenucmd} },
 	{ Mod1Mask|ShiftMask,           XK_space,  spawn,          {.v = dqalccmd} },
-	{ MODKEY,                       XK_t,      spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_j,      pushdown,       {0} },
 	{ MODKEY|ShiftMask,             XK_k,      pushup,         {0} },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
@@ -108,7 +93,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
+	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
@@ -125,7 +110,6 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
-	{ MODKEY|ShiftMask,		XK_l,      spawn,	   SHCMD("slock") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)

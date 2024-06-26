@@ -1,0 +1,37 @@
+# Monitor Brightness Control Commands
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+	{brightnessctl s +10%, brightnessctl s 10%-}
+
+# Volume Control Commands
+{XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
+	{amixer sset Master 5%+, amixer sset Master 5%-, amixer sset Master toggle}
+
+# --- Programs Shortcuts ---
+# vscode
+super + c
+	code
+
+# phpstorm
+super + p
+	phpstorm
+
+# Default Browser
+super + b
+	$BROWSER
+
+# ST terminal
+super + Return
+	st
+
+# clipmenu
+super + v
+	$HOME/bin/clipcmd.sh
+
+# scrot (take screenshot)
+Print
+	$HOME/bin/scrot.sh	
+
+# slock (lock screen)
+super + L
+	slock
+
