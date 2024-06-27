@@ -29,4 +29,4 @@ else
     BATTERY_ICON="󰂎"
 fi
 
-echo "$BATTERY_ICON $battery"
+echo "$BATTERY_ICON $battery|"
