@@ -8,12 +8,14 @@ static int min_width = 600;                    /* minimum width when centered */
 static const char *fonts[] = {
 	"FiraCodeNerdFontMono-Meduim:size=11",
 	"NotoKufiArabic-regular:size=11",
-	"monospace:size=11"
+	"Nerd Font:size=16",
+	"Font Awesome 6 Free:size=14",
+	"JoyPixels-12"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
+	[SchemeNorm] = { "#bbbbbb", "#282a36"/*"#222222"*/ },
 	[SchemeSel] = { "#eeeeee", "#005577" },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };

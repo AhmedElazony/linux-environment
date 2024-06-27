@@ -4,7 +4,11 @@
 
 # Volume Control Commands
 {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
-	{amixer sset Master 5%+, amixer sset Master 5%-, amixer sset Master toggle}
+	{$HOME/bin/volume-up.sh, $HOME/bin/volume-down.sh, $HOME/bin/volume-toggle.sh}
+
+# Launch qalc after pressing Calculator Key
+XF86Calculator
+	$HOME/bin/dqalccmd.sh
 
 # --- Programs Shortcuts ---
 # vscode
@@ -35,3 +39,18 @@ Print
 super + L
 	slock
 
+# suspend the system
+super + S
+	systemctl suspend
+
+# Configure Monitors
+super + M
+	$HOME/bin/config-monitors.sh
+
+# Change Wallpaper
+super + W
+	$HOME/bin/change-wallpaper.sh
+
+# Get Emoji Picker
+super + e
+	$HOME/bin/emoji-picker.sh
