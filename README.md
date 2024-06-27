@@ -15,7 +15,7 @@
 - clipmenu (clipboard used in dmenu)
 - scrot (simple screenshot tool)
 - picom (for transparency)
-- Fonts Like: (Fira Code Nerd, Noto Kufi Arabic Font, Nerd Font, Font Awesome) you can download from [google fonts](https://fonts.google.com) or throw your package manager
+- Fonts Like: (Fira Code Nerd, Noto Kufi Arabic Font, Nerd Font, Font Awesome, jeyPixels-12 [install throw pacman]) you can download from [google fonts](https://fonts.google.com) or throw your package manager
 
 ### NOTES
 - You can use <strong>one</strong> of these to configure the status bar NOT The Together:
