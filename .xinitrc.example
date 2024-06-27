@@ -1,21 +1,27 @@
 xrandr --output eDP-1-1 --mode 1920x1080
 xrandr --output HDMI-0 --mode 1920x1080 --rate 144
-xrandr --output eDP-1-1 --same-as HDMI-0 --mode 1920x1080 --left-of HDMI-0 # my monitors setup.
+xrandr --output eDP-1-1 --same-as HDMI-0 --mode 1920x1080 --left-of HDMI-0
 
 systemctl --user import-environment DISPLAY
 
-picom & # for transparency
+picom &
 
-clipmenud & # for clipboard
+clipmenud &
 
-feh --bg-scale /your/wallpaper/path # for your wallpaper
+$HOME/.fehbg &
 
-fcitx5 & # for keyboard layout
+fcitx5 &
 
-xss-lock -- slock & # for detecting lock screen when lid goas off.
+xss-lock -- slock &
 
-slstatus & # for status bar in dwm (use this or dwm-status.sh script)
+#slstatus &
 
-sxhkd & # for managing keybindings
+#./src/dwm/scripts/dwm-status.sh &
+
+dwmblocks &
+
+sxhkd &
+
+dunst &
 
 exec dwm
