@@ -1,6 +1,9 @@
-xrandr --output eDP-1-1 --mode 1920x1080
-xrandr --output HDMI-0 --mode 1920x1080 --rate 144
-xrandr --output eDP-1-1 --same-as HDMI-0 --mode 1920x1080 --left-of HDMI-0
+xrandr --output HDMI-1-0 --mode 1920x1080 --rate 144 --right-of eDP-1
+
+# for Optimus-manager
+/usr/bin/prime-offload
+# Trap the exit signal to run the script when X stops, For Optimus-manager
+trap 'sudo /usr/bin/prime-switch' EXIT
 
 systemctl --user import-environment DISPLAY
 

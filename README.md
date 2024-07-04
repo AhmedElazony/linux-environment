@@ -5,6 +5,7 @@
 
 ### Dependencies
 - Xorg (for dwm)
+- optimus-manager (for managing GPUs)
 - pipewire (if you are using pulseaudio, you can edit the configuration related to it)
 - amixer (for managing audio)
 - sxhkd (for managing keybindings)
