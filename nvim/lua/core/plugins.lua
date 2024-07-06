@@ -23,8 +23,25 @@ return require('packer').startup(function(use)
   use {
        'nvim-telescope/telescope.nvim',
        tag = '0.1.8',
-       requires = { {'nvim-lua/plenary.nvim'} }
+       requires = {
+		{'nvim-lua/plenary.nvim'},
+	},
   }
+  use {'nvim-telescope/telescope-ui-select.nvim' }
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
+  use {
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
+    'rafamadriz/friendly-snippets',
+  }
+
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
