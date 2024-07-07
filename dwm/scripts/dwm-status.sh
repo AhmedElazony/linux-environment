@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CPU_ICON="󰍛"
+CPU_ICON=""
 RAM_ICON=""
 TEMP_ICON="🌡"
 SOUND_ICON="󰕾"
@@ -10,10 +10,13 @@ PACKAGES_ICON="ᗧ"
 BATTERY_ICON="󰁹"
 PLUG_ICON="󰚥"
 ETHERNET_ICON=""
+OBS_ICON=""
+TELEGRAM_ICON=""
+DISCORD_ICON="󰙯"
 
 while true; do
     # Get the current time
-    datetime=$(date "+%a %Y-%m-%d %I:%M")
+    datetime=$(date "+%a %d-%m-%Y %I:%M")
 
     # Get the battery status
     battery=$(cat /sys/class/power_supply/BAT0/capacity)    
@@ -23,7 +26,7 @@ while true; do
     # Battery Percentage
     if [ "$pluged" -eq 1 ] && [ "$battery" -eq 100 ]; then
 	BATTERY_ICON="󰚥"
-    elif [ "$pluged" -eq 1 ] && ["$battery" -lt 100 ] ; then
+    elif [ "$pluged" -eq 1 ] && [ ! "$battery" -eq 100 ]; then
 	BATTERY_ICON="󰂅"
     elif [ "$battery" -ge 90 ]; then
 	BATTERY_ICON="󰁹"
@@ -68,7 +71,7 @@ while true; do
     ethernet=$(cat /sys/class/net/eno1/operstate)
     # Check If the Ethernet is connected or not
     if [ "$ethernet" = "down" ]; then
-	    EHTERNET_ICON="󰈂"
+	    ETHERNET_ICON="󰈂"
     else
 	    ETHERNET_ICON="󰈀"
     fi
@@ -92,7 +95,7 @@ while true; do
     # Check if Telegram is running
     if pgrep -f "telegram-desktop" > /dev/null
     then
-        telegram_status=" "
+        telegram_status="$TELEGRAM_ICON "
 
     else
        telegram_status=""
@@ -102,7 +105,7 @@ while true; do
     # Check if Discord is running
     if pgrep -f "discord" > /dev/null
     then
-        discord_status="󰙯 "
+        discord_status="$DISCORD_ICON "
     else
        discord_status=""
     
@@ -111,16 +114,15 @@ while true; do
     # Check if OBS is running
     if pgrep -f "obs" > /dev/null
     then
-        obs_status=" "
+	obs_status="$OBS_ICON "
     else
         obs_status=""
-    
     fi
 
     # Set the status bar to the combined information
-    xsetroot -name "$datetime;|$UPDATES_ICON $updates $PACKAGES_ICON $packages|$BATTERY_ICON $battery%|$CPU_ICON $cpu_usage% $TEMP_ICON $temp°C $RAM_ICON  $ram_usage|$SOUND_ICON $sound |$ETHERNET_ICON $ethernet |$WIFI_ICON  $wifi |$telegram_status$discord_status$obs_status" 
+    xsetroot -name "$datetime;|$UPDATES_ICON $updates $PACKAGES_ICON $packages|$CPU_ICON $cpu_usage% $TEMP_ICON $temp°C $RAM_ICON  $ram_usage|$SOUND_ICON $sound |$ETHERNET_ICON $ethernet |$WIFI_ICON  $wifi |$BATTERY_ICON $battery%|$telegram_status$discord_status$obs_status" 
 
     # Update every 10 seconds
-    sleep 0.3
+    sleep 0.06
 done
 
