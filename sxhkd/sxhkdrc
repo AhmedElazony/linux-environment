@@ -54,3 +54,9 @@ super + W
 # Get Emoji Picker
 super + e
 	$HOME/bin/emoji-picker.sh
+
+# Configure Wifi
+super + i
+	$HOME/bin/wifi-connect.sh
+super + I
+	$HOME/bin/wifi-disconnect.sh
