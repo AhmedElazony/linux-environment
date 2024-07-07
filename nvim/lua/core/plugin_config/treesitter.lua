@@ -8,6 +8,12 @@ require'nvim-treesitter.configs'.setup {
 	highlight = {
 		enable = true,
 	},
+	autopairs = { enable = true },
+	indent = { enable = true, diable = { "yaml" } },
+	context_commentstring = {
+		enable = true,
+		enable_autocmd = false,
+	}
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()

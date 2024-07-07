@@ -14,6 +14,7 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'ellisonleao/gruvbox.nvim'
+  use 'lunarvim/darkplus.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'navarasu/onedark.nvim'
@@ -37,15 +38,25 @@ return require('packer').startup(function(use)
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/cmp-path',
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
     'rafamadriz/friendly-snippets',
   }
-
-  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
-
+  use {
+     "adalessa/laravel.nvim",
+     "tpope/vim-dotenv",
+     "MunifTanjim/nui.nvim",
+     "nvimtools/none-ls.nvim"
+  }
+  use 'phpactor/phpactor'
+  use "stevearc/conform.nvim"
+  use 'mfussenegger/nvim-lint'
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
+  use "craftzdog/solarized-osaka.nvim"
+  use "numToStr/Comment.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

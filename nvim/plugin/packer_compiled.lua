@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -89,15 +94,35 @@ _G.packer_plugins = {
     path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
   cmp_luasnip = {
     loaded = true,
     path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["conform.nvim"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
+  ["darkplus.nvim"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
+    url = "https://github.com/lunarvim/darkplus.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -108,6 +133,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
+  ["laravel.nvim"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/laravel.nvim",
+    url = "https://github.com/adalessa/laravel.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -124,10 +154,30 @@ _G.packer_plugins = {
     path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["none-ls.nvim"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
+    url = "https://github.com/nvimtools/none-ls.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-lint"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/nvim-lint",
+    url = "https://github.com/mfussenegger/nvim-lint"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -144,6 +194,11 @@ _G.packer_plugins = {
     path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -159,10 +214,20 @@ _G.packer_plugins = {
     path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  phpactor = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/phpactor",
+    url = "https://github.com/phpactor/phpactor"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["solarized-osaka.nvim"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/solarized-osaka.nvim",
+    url = "https://github.com/craftzdog/solarized-osaka.nvim"
   },
   ["telescope-ui-select.nvim"] = {
     loaded = true,
@@ -173,6 +238,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-dotenv"] = {
+    loaded = true,
+    path = "/home/ahmedelazony/.local/share/nvim/site/pack/packer/start/vim-dotenv",
+    url = "https://github.com/tpope/vim-dotenv"
   }
 }
 
