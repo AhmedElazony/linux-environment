@@ -170,7 +170,7 @@ static unsigned int defaultrcs = 257;
 
 static const char *colorname[] = {
     /* Normal colors */
-    [0] = "#1d1f21", /* black */
+    [0] = "#1d1f21",//"#131326",//"#1d1f21", /* black */
     [1] = "#ff5555", /* red */
     [2] = "#50fa7b", /* green */
     [3] = "#f1fa8c", /* yellow */
