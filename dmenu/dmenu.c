@@ -978,9 +978,9 @@ setup(void)
 					break;
 
 		if (centered) {
-			mw = MIN(MAX(max_textw() + promptw, min_width), info[i].width);
-			x = info[i].x_org + ((info[i].width  - mw) / 2);
-			y = info[i].y_org + ((info[i].height - mh) / 2);
+			mw = MIN(MAX(max_textw() + promptw, min_width), (dmw>0 ? dmw : info[i].width));
+			x = info[i].x_org + ((info[i].width  - mw) / 2) + dmx;
+			y = info[i].y_org + ((info[i].height - mh - dmy) / 2);
 		} else {
 			x = info[i].x_org;
 			y = info[i].y_org + (topbar ? 0 : info[i].height - mh);
@@ -995,9 +995,9 @@ setup(void)
 			die("could not get embedding window attributes: 0x%lx",
 			    parentwin);
 		if (centered) {
-			mw = MIN(MAX(max_textw() + promptw, min_width), wa.width);
-			x = (wa.width  - mw) / 2;
-			y = (wa.height - mh) / 2;
+			mw = MIN(MAX(max_textw() + promptw, min_width), (dmw>0 ? dmw : wa.width));
+			x = (wa.width  - mw - dmx) / 2;
+			y = (wa.height - mh - dmy) / 2;
 		} else {
 			x = 0;
 			y = topbar ? 0 : wa.height - mh;
