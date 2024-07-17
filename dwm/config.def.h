@@ -8,12 +8,12 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int splitstatus        = 1;	/* 1 for split status items */
-static const char *splitdelim	    = ";";	/* Character used for separating status */
+static const char *splitdelim     = ";";	/* Character used for separating status */
 static const char *fonts[]          = { "FiraCodeNerdFont-Medium:size=12", 
 					"NotoKufiArabic-Medium:size=12",
 					"monospace:size=14",
-					"Nerd Font:size=16",
-					"Font Awesome 6 Free:size=14"
+					"Nerd Font:size=14",
+					"Font Awesome 6 Free:size=12"
 };
 static const char dmenufont[]       = "FiraCodeNerdFontMono-Medium:size=13";
 static const char col_gray1[]       = "#222222"; //"#282a36"
@@ -30,7 +30,7 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray4, col_red2,  col_red },
 };
 
-static const unsigned int alphas[][3]	= {
+static const unsigned int alphas[][3] = {
 	/*		fg	bg	border*/
 	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
@@ -77,7 +77,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-fn", dmenufont, "-nb", "#1d1f21", "-nf", col_gray3, "-sb", col_red2, "-sf", col_gray4, NULL };
-static const char *dqalccmd[] = { "dmenu_run", "-c", "-l", "2", "-C", "-fn", dmenufont, "-nb", "#282a36", "-nf", col_gray3, "-sb", col_red2, "-sf", col_gray4, NULL };
+static const char *dqalccmd[] = { "dmenu_run", "-c", "-l", "2", "-C", "-fn", dmenufont, "-nb", "#222222", "-nf", col_gray3, "-sb", col_red2, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
