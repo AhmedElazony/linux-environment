@@ -19,17 +19,5 @@ return {
         debounce_text_changes = 150,
       },
     })
-    -- lspconfig.intelephense.setup({
-    --   filetypes = { "blade", "php" },
-    --   settings = {
-    --     intelephense = {
-    --       filetypes = { "php", "blade" },
-    --       files = {
-    --         associations = { "*.php", "*.blade.php" },
-    --         maxSize = 5000000,
-    --       },
-    --     },
-    --   },
-    -- })
   end,
 }
