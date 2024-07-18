@@ -1,3 +1,3 @@
 #!/bin/bash
 
-clipmenu -c -nb "#282a36" -sb "#94041c" -sf "#eeeeee"
+clipmenu -c -nb "#222222" -sb "#94041c" -sf "#eeeeee" -l 10 -z 800
