@@ -9,12 +9,12 @@
 - pipewire (if you are using pulseaudio, you can edit the configuration related to it)
 - amixer (for managing audio)
 - sxhkd (for managing keybindings)
-- feh (for background imgae management)
+- feh (for background image management)
 - dunst (for notification management)
 - slock (for lock screen)
 - xss-lock (for detecting lock screen if the screen goes off)
 - clipmenu (clipboard used in dmenu)
-- scrot (simple screenshot tool)
+- maim (simple and very good screenshot tool)
 - picom (for transparency)
 - Fonts Like: (Fira Code Nerd, Noto Kufi Arabic Font, Nerd Font, Font Awesome, jeyPixels-12 [install throw pacman]) you can download from [google fonts](https://fonts.google.com) or throw your package manager
 
